@@ -12,4 +12,4 @@ WORKDIR /app
 COPY --from=builder /app/main /app/employee-service
 ENV GO_ENV=development
 EXPOSE 8082
-CMD ["/app/auth-service"]
+CMD ["/app/employee-service"]
