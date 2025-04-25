@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: comin-employee-service
+  namespace: comin-dev
+spec:
+  selector:
+    app: comin-employee-service
+  ports:
+  - port: 80
+    targetPort: 8082
+  type: ClusterIP

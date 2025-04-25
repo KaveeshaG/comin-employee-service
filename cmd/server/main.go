@@ -98,14 +98,14 @@ func (app *Application) initializeDependencies() {
 
 func setupRouter(app *Application) *gin.Engine {
 	// Initialize auth client
-	authClient := auth.NewAuthClient("http://localhost:8080/api/v1/auth")
+	authClient := auth.NewAuthClient("https://comin.kaveeshagimhana.com/api/v1/auth")
 	if authClient == nil {
-		authClient = auth.NewAuthClient("http://localhost:8080/api/v1/auth")
+		authClient = auth.NewAuthClient("https://comin.kaveeshagimhana.com/api/v1/auth")
 	}
 
-	orgClient := organization.NewOrganizationClient("http://localhost:8081/api/v1")
+	orgClient := organization.NewOrganizationClient("https://comin.kaveeshagimhana.com/api/v1")
 	if orgClient == nil {
-		orgClient = organization.NewOrganizationClient("http://localhost:8081/api/v1")
+		orgClient = organization.NewOrganizationClient("https://comin.kaveeshagimhana.com/api/v1")
 	}
 
 	router := gin.New()

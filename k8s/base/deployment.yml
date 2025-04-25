@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comin-employee-service
+  namespace: comin-dev
+  labels:
+    app: comin-employee-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comin-employee-service
+  template:
+    metadata:
+      labels:
+        app: comin-employee-service
+    spec:
+      containers:
+      - name: comin-employee-service
+        image: ghcr.io/kaveeshag/comin-employee-service:dev
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
+        env:
+        - name: GO_ENV
+          value: "development"
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+          requests:
+            cpu: "0.2"
+            memory: "256Mi"
