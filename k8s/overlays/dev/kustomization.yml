@@ -16,5 +16,5 @@ namespace: comin-dev
 #     group: apps
 #     version: v1
 #     kind: Deployment
-#     name: comin-authentication-service
+#     name: comin-employee-service
 #   path: deployment-patch.json
