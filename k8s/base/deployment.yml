@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: comin-employee-service
-        image: ghcr.io/kaveeshag/comin-employee-service:1effa7abeb7d05b77bc5c8193e7f445f8b9c7beb
+        image: ghcr.io/kaveeshag/comin-employee-service:b3b069a435bed7cbb3b59f92d4b9d225042e64d5
         imagePullPolicy: Always
         ports:
         - containerPort: 8082
