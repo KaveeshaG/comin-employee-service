@@ -138,7 +138,7 @@ func setupRouter(app *Application) *gin.Engine {
 		}
 
 		// Organization specific routes
-		org := api.Group("/organizations/:organization_id")
+		org := api.Group("employees/organizations/:organization_id")
 		org.Use(organization.ValidateOrganizationAccess(authClient, orgClient))
 		{
 			org.GET("/employees", app.employeeHandler.ListByOrganization)
