@@ -24,6 +24,7 @@ type Employee struct {
 	ManagerID       *uuid.UUID `json:"manager_id,omitempty" gorm:"type:uuid"`
 	WorkType        string     `json:"work_type" gorm:"default:'full-time'"`
 	Position        *Position  `json:"position,omitempty" gorm:"foreignKey:PositionID"`
+	QrCode          string     `json:"qr_code"`
 }
 
 type Position struct {
