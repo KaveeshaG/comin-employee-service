@@ -80,8 +80,12 @@ type UpdateEmployeeRequest struct {
 	DepartmentID *uuid.UUID `json:"department_id"`
 	FirstName    string     `json:"first_name"`
 	LastName     string     `json:"last_name"`
+	Email        string     `json:"email" binding:"required,email"`
 	Phone        string     `json:"phone"`
 	ManagerID    *uuid.UUID `json:"manager_id"`
 	WorkType     string     `json:"work_type"`
 	Status       string     `json:"status,omitempty"`
+	DateOfBirth  *time.Time `json:"date_of_birth"`
+	HireDate     time.Time  `json:"hire_date" binding:"required"`
+	EmployeeID   string     `json:"employee_id"`
 }
